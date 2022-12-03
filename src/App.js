@@ -1,9 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import './App.css';
+import Signin from "./pages/Signin";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      TEAM ASSESSMENTS FRONTEND
+      <Routes>
+        <Route exact path="/" element={<Signin/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+      </Routes>
     </div>
   );
 }
