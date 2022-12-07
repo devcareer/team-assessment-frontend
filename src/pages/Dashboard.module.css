@@ -1,0 +1,26 @@
+.dashboard {
+  display: grid;
+  grid-template-rows: 15vh 40vw;
+  grid-template-columns:
+    [sidebar-start] 26.7rem [sidebar-end full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]
+    1fr [full-end];
+}
+
+.navbar {
+  background-color: red;
+  grid-column: sidebar-start / full-end;
+}
+
+.sidebar {
+  background-color: blue;
+  grid-column: sidebar-start / sidebar-end;
+}
+
+.content {
+  background-color: green;
+  grid-column: center-start / center-end;
+}
