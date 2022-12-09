@@ -1,6 +1,6 @@
 .dashboard {
   display: grid;
-  grid-template-rows: 15vh 40vw;
+  grid-template-rows: 15vh 85vh;
   grid-template-columns:
     [sidebar-start] 26.7rem [sidebar-end full-start] 1fr [center-start] repeat(
       8,
@@ -16,8 +16,9 @@
 }
 
 .sidebar {
-  background-color: blue;
+  background-color: #fbfbfb;
   grid-column: sidebar-start / sidebar-end;
+  /* grid-row: 2 / -1; */
 }
 
 .content {
