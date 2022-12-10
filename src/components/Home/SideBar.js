@@ -1,38 +1,70 @@
-// import { useState } from "react";
-import Dashboard from '../../pages/Home';
-import Assessments from '../../pages/Assessments';
-import Notifications from '../../pages/Notifications';
-import dashboard from '../../assets/dashboard.svg';
-// import dashboardColor from "../../assets/dashboardColor.svg";
-import assessments from '../../assets/assessments.svg';
-import notification from '../../assets/notification.svg';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import Dashboard from '../../assets/dashboard.svg';
+import DashboardColor from '../../assets/dashboardColor.svg';
+
+import Assessments from '../../assets/assessments.svg';
+import AssessmentsColor from '../../assets/assessmentsColor.svg';
+
+import Notifications from '../../assets/notification.svg';
+import NotificationsColor from '../../assets/notificationColor.svg';
+
 import logout from '../../assets/logout.svg';
 
 import classes from './SideBar.module.css';
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+
+const SIDE_BAR = {
+  list: [
+    { id: 1, icon: Dashboard, iconColor: DashboardColor, label: 'Dashboard' },
+    {
+      id: 2,
+      icon: Assessments,
+      iconColor: AssessmentsColor,
+      label: 'Assessments',
+    },
+    {
+      id: 3,
+      icon: Notifications,
+      iconColor: NotificationsColor,
+      label: 'Notifications',
+    },
+  ],
+};
 
 const SideBar = () => {
+  const [selected, setSelected] = useState(1);
+  const handleClick = id => {
+    setSelected(id);
+  };
+
   return (
     <nav className={classes.sidebar}>
       <ul className={classes.navigate}>
-        <CustomLink to="/home/dashboard">
-          <div className={classes.link}>
-            <img src={dashboard} alt="" />
-            <p>Dashboard</p>
-          </div>
-        </CustomLink>
-        <CustomLink to="/home/assessments">
-          <div className={classes.link}>
-            <img src={assessments} alt="" />
-            <p>Assessments</p>
-          </div>
-        </CustomLink>
-        <CustomLink to="/home/notifications">
-          <div className={classes.link}>
-            <img src={notification} alt="" />
-            <p>Notifications</p>
-          </div>
-        </CustomLink>
+        {selected &&
+          SIDE_BAR.list.map(list => (
+            <li
+              key={list.id}
+              className={classes[selected === list.id ? 'selected' : '']}
+            >
+              <div
+                className={classes.link}
+                id={list.id}
+                onClick={() => handleClick(list.id)}
+              >
+                <img
+                  src={selected === list.id ? list.iconColor : list.icon}
+                  alt=""
+                />
+                <p>
+                  {list.label}
+                  {list.label === 'Notifications' && selected === list.id && (
+                    <span>1</span>
+                  )}
+                </p>
+              </div>
+            </li>
+          ))}
       </ul>
 
       <ul className={classes['log-out']}>
@@ -46,51 +78,5 @@ const SideBar = () => {
     </nav>
   );
 };
-const CustomLink = ({ to, children, ...props }) => {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
-  return (
-    <li className={isActive ? classes.active : ''}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  );
-};
-
-// return (
-//   <nav className={classes.sidebar}>
-//     <ul className={classes.navigate}>
-//       <li>
-//         <Link to="/home" className={classes.link}>
-// <img src={dashboard} alt="" />
-//           <p>Dashboard</p>
-//         </Link>
-//       </li>
-//       <li>
-//         <Link to="/home/assessments" className={classes.link}>
-//           <img src={assessments} alt="" />
-//           <p>Assessments</p>
-//         </Link>
-//       </li>
-//       <li>
-//         <Link to="/home/notifications" className={classes.link}>
-//           <img src={notification} alt="" />
-//           <p>Notifications</p>
-//         </Link>
-//       </li>
-//     </ul>
-
-// <ul className={classes['log-out']}>
-//   <li>
-//     <Link to="/" className={classes.link}>
-//       <img src={logout} alt="" />
-//       <p>Log out</p>
-//     </Link>
-//   </li>
-// </ul>
-//   </nav>
-// );
 
 export default SideBar;

@@ -20,24 +20,36 @@
   gap: 1.5rem;
   font-size: 1.6rem;
   align-items: center;
-  padding: 2.6rem;
-}
-
-li a {
-  text-decoration: none;
-}
-
-.link {
+  padding: 1.5rem;
   color: #a49e9e;
+  cursor: pointer;
 }
 
-/* .active {
+.selected {
   background-color: #e7fffa;
-  color: #0a9c7d;
   border-left: 0.4rem solid #0a9c7d;
-} */
+}
+
+.selected p {
+  color: #0a9c7d;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+span {
+  margin-left: 1rem;
+  background-color: #0a9c7d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
 
 .log-out p {
   color: #e93c3c;
   font-weight: 500;
+}
+
+a {
+  text-decoration: none;
 }
