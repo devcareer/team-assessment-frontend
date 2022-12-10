@@ -15,25 +15,27 @@
   /* gap: 3rem; */
 }
 
-.link,
-.active {
+.link {
   display: flex;
   gap: 1.5rem;
   font-size: 1.6rem;
   align-items: center;
-  text-decoration: none;
   padding: 2.6rem;
+}
+
+li a {
+  text-decoration: none;
 }
 
 .link {
   color: #a49e9e;
 }
 
-.active {
+/* .active {
   background-color: #e7fffa;
   color: #0a9c7d;
   border-left: 0.4rem solid #0a9c7d;
-}
+} */
 
 .log-out p {
   color: #e93c3c;
