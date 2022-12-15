@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../components/Home/Content';
+import { Outlet } from 'react-router-dom';
 import NavBar from '../components/Home/NavBar';
 import SideBar from '../components/Home/SideBar';
 
@@ -15,7 +15,7 @@ function Home() {
         <SideBar />
       </div>
       <main className={classes.content}>
-        <Content />
+        <Outlet />
       </main>
     </div>
   );

@@ -1,6 +1,6 @@
 .dashboard {
   display: grid;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 10vh minmax(90vh, min-content);
   grid-template-columns:
     [sidebar-start] 26.7rem [sidebar-end full-start] 1fr [center-start] repeat(
       8,
