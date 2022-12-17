@@ -1,0 +1,55 @@
+.dashboard {
+  padding: 6rem 5rem 4rem 3rem;
+}
+
+.header-main {
+  font-size: 4rem;
+  font-weight: 500;
+  padding-bottom: 4rem;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.text {
+  font-size: 2.4rem;
+}
+
+.intro span {
+  font-weight: 500;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.summary {
+  border: 0.1rem solid #c4c4c4;
+  border-radius: 1.6rem;
+  width: 28%;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.num {
+  font-size: 4rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.description {
+  color: #706363;
+  font-size: 2rem;
+}
+
+.header-sub {
+  font-size: 3.2rem;
+  font-weight: 500;
+  padding-bottom: 1.5rem;
+}

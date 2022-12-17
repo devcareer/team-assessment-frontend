@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Dashboard from '../../assets/dashboard.svg';
@@ -14,23 +14,21 @@ import logout from '../../assets/logout.svg';
 
 import classes from './SideBar.module.css';
 
-const SIDE_BAR = {
-  list: [
-    { id: 1, icon: Dashboard, iconColor: DashboardColor, label: 'Dashboard' },
-    {
-      id: 2,
-      icon: Assessments,
-      iconColor: AssessmentsColor,
-      label: 'Assessments',
-    },
-    {
-      id: 3,
-      icon: Notifications,
-      iconColor: NotificationsColor,
-      label: 'Notifications',
-    },
-  ],
-};
+const SIDE_BAR = [
+  { id: 1, icon: Dashboard, iconColor: DashboardColor, label: 'dashboard' },
+  {
+    id: 2,
+    icon: Assessments,
+    iconColor: AssessmentsColor,
+    label: 'assessments',
+  },
+  {
+    id: 3,
+    icon: Notifications,
+    iconColor: NotificationsColor,
+    label: 'notifications',
+  },
+];
 
 const SideBar = () => {
   const [selected, setSelected] = useState(1);
@@ -39,43 +37,45 @@ const SideBar = () => {
   };
 
   return (
-    <nav className={classes.sidebar}>
-      <ul className={classes.navigate}>
-        {selected &&
-          SIDE_BAR.list.map(list => (
-            <li
-              key={list.id}
-              className={classes[selected === list.id ? 'selected' : '']}
-            >
-              <div
-                className={classes.link}
-                id={list.id}
-                onClick={() => handleClick(list.id)}
+    <Fragment>
+      <nav className={classes.sidebar}>
+        <ul className={classes.navigate}>
+          {selected &&
+            SIDE_BAR.map(list => (
+              <Link
+                to={`${list.label}`}
+                key={list.id}
+                className={classes[selected === list.id ? 'selected' : '']}
               >
-                <img
-                  src={selected === list.id ? list.iconColor : list.icon}
-                  alt=""
-                />
-                <p>
-                  {list.label}
-                  {list.label === 'Notifications' && selected === list.id && (
-                    <span>1</span>
-                  )}
-                </p>
-              </div>
-            </li>
-          ))}
-      </ul>
+                <div
+                  className={classes.link}
+                  onClick={() => handleClick(list.id)}
+                >
+                  <img
+                    src={selected === list.id ? list.iconColor : list.icon}
+                    alt=""
+                  />
+                  <p>
+                    {list.label}
+                    {list.label === 'Notifications' && selected === list.id && (
+                      <span>1</span>
+                    )}
+                  </p>
+                </div>
+              </Link>
+            ))}
+        </ul>
 
-      <ul className={classes['log-out']}>
-        <li>
-          <Link to="/" className={classes.link}>
-            <img src={logout} alt="" />
-            <p>Log out</p>
-          </Link>
-        </li>
-      </ul>
-    </nav>
+        <ul className={classes['log-out']}>
+          <li>
+            <Link to="/" className={classes.link}>
+              <img src={logout} alt="" />
+              <p>Log out</p>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </Fragment>
   );
 };
 
