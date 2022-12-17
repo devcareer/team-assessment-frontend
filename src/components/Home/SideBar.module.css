@@ -30,7 +30,7 @@
   border-left: 0.4rem solid #0a9c7d;
 }
 
-p {
+.link p {
   text-transform: capitalize;
 }
 
@@ -55,6 +55,6 @@ p {
   font-weight: 500;
 }
 
-a {
+.sidebar a {
   text-decoration: none;
 }

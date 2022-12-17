@@ -11,17 +11,14 @@
 }
 
 .navbar {
-  /* background-color: red; */
   grid-column: sidebar-start / full-end;
 }
 
 .sidebar {
   background-color: #fbfbfb;
   grid-column: sidebar-start / sidebar-end;
-  /* grid-row: 2 / -1; */
 }
 
 .content {
-  /* background-color: green; */
   grid-column: center-start / center-end;
 }
