@@ -1,0 +1,51 @@
+import React, { useState } from 'react';
+import "./SigninForm.css"
+
+function SignInForm() {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [acceptTerms, setAcceptTerms] = useState(false);
+
+  function handleFullNameChange(event) {
+    setFullName(event.target.value);
+  }
+
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleAcceptTermsChange(event) {
+    setAcceptTerms(event.target.checked);
+  }
+
+  return (
+    <form>
+        <button>
+            Sign in with Google
+        </button>
+        <div className='flex flex-row'>
+          <hr/>OR<hr/>
+        </div>
+      <label>
+        Full Name<span style={{ color: "red" }}>*</span>
+        <input type="text" value={fullName} onChange={handleFullNameChange} />
+      </label>
+      <label>
+        Email<span style={{ color: "red" }}>*</span>
+        <input type="email" value={email} onChange={handleEmailChange} />
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={acceptTerms}
+          onChange={handleAcceptTermsChange}
+        />
+        I agree to the processing of my personal data (name and email) for the purpose of conducting the assessment. Read <a href="">Privacy Policy</a> to know more.
+      </label>
+      <input type="submit" value="Sign In" />
+    </form>
+  );
+}
+
+
+export default SignInForm
