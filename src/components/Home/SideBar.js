@@ -14,23 +14,21 @@ import logout from '../../assets/logout.svg';
 
 import classes from './SideBar.module.css';
 
-const SIDE_BAR = {
-  list: [
-    { id: 1, icon: Dashboard, iconColor: DashboardColor, label: 'dashboard' },
-    {
-      id: 2,
-      icon: Assessments,
-      iconColor: AssessmentsColor,
-      label: 'assessments',
-    },
-    {
-      id: 3,
-      icon: Notifications,
-      iconColor: NotificationsColor,
-      label: 'notifications',
-    },
-  ],
-};
+const SIDE_BAR = [
+  { id: 1, icon: Dashboard, iconColor: DashboardColor, label: 'dashboard' },
+  {
+    id: 2,
+    icon: Assessments,
+    iconColor: AssessmentsColor,
+    label: 'assessments',
+  },
+  {
+    id: 3,
+    icon: Notifications,
+    iconColor: NotificationsColor,
+    label: 'notifications',
+  },
+];
 
 const SideBar = () => {
   const [selected, setSelected] = useState(1);
@@ -43,7 +41,7 @@ const SideBar = () => {
       <nav className={classes.sidebar}>
         <ul className={classes.navigate}>
           {selected &&
-            SIDE_BAR.list.map(list => (
+            SIDE_BAR.map(list => (
               <Link
                 to={`${list.label}`}
                 key={list.id}
@@ -77,7 +75,6 @@ const SideBar = () => {
           </li>
         </ul>
       </nav>
-      {/* <Outlet /> */}
     </Fragment>
   );
 };

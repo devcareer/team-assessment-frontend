@@ -2,13 +2,11 @@ import classes from './Dashboard.module.css';
 import nextId from 'react-id-generator';
 import Timetable from '../components/Home/Timetable';
 
-const SUMMARY = {
-  list: [
+const SUMMARY = [
     { id: nextId(), num: 3, des: 'Assessments' },
     { id: nextId(), num: 0, des: 'Points' },
     { id: nextId(), num: 0, des: 'Completed' },
-  ],
-};
+  ]
 
 const Dashboard = () => {
   return (
@@ -21,7 +19,7 @@ const Dashboard = () => {
         <p className={classes.text}>Track: UX/UI Design</p>
       </div>
       <div className={classes.display}>
-        {SUMMARY.list.map(list => (
+        {SUMMARY.map(list => (
           <div className={classes.summary} key={list.id}>
             <p className={classes.num}>{list.num}</p>
             <p className={classes.description}>{list.des}</p>
