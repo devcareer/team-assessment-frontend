@@ -3,7 +3,7 @@
 }
 
 .header-main {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 500;
   padding-bottom: 4rem;
 }
@@ -15,7 +15,7 @@
 }
 
 .text {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .intro span {
@@ -38,18 +38,18 @@
 }
 
 .num {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 500;
   padding-bottom: 1rem;
 }
 
 .description {
   color: #706363;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header-sub {
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 500;
   padding-bottom: 1.5rem;
 }

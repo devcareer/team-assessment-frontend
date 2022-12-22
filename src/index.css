@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
+* {
   margin: 0;
   padding: 0;
 }
@@ -17,10 +17,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}*/
+}
 
 body {
   overflow-x: hidden;
   font-family: 'Rubik', sans-serif;
   color: #333333;
-} 
+}
