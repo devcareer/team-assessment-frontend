@@ -1,0 +1,42 @@
+.google-button{
+    color: #0A9C7D;
+    border: 1px solid #0A9C7D;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.google-button:hover{
+    background-color: whitesmoke;
+}
+
+.or{
+    color: #706363;
+}
+
+.input{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.policy{
+    color: #0A9C7D;
+}
+
+.button{
+    width: 100%;
+    border: 1px solid #0A9C7D;
+    border-radius: 10px;
+    margin-top: 1.5em;
+    background-color: #0A9C7D;
+    color: white;
+}
+
+.button:hover{
+    background-color: #187a65;
+}
+
+.sign-text{
+    background-color:#08342B;
+}
