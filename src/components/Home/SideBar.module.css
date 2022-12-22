@@ -1,6 +1,6 @@
 .sidebar {
   padding-top: 3rem;
-  padding-bottom: 7rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,6 +53,8 @@
 .log-out p {
   color: #e93c3c;
   font-weight: 500;
+  text-transform: none;
+  font-size: 1.5rem;
 }
 
 .sidebar a {
