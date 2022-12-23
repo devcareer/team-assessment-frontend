@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
-import Questions from './components/Questions/Questions';
+import Questions from './components/Home/Questions';
 
 function App() {
   return (
