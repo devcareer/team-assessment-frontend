@@ -1,21 +1,22 @@
 .dashboard {
-  padding: 6rem 5rem 4rem 3rem;
+  padding: 4.5rem 5rem 4rem 3rem;
 }
 
 .header-main {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: 1.7rem;
   font-weight: 500;
-  padding-bottom: 4rem;
+  padding-bottom: 1.7rem;
 }
 
 .intro {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .text {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .intro span {
@@ -31,16 +32,16 @@
 .summary {
   border: 0.1rem solid #c4c4c4;
   border-radius: 1.6rem;
-  width: 28%;
+  width: 25%;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .num {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .description {
@@ -49,7 +50,7 @@
 }
 
 .header-sub {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding-bottom: 1.5rem;
 }

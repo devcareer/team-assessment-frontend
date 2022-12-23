@@ -1,5 +1,5 @@
 .assessments {
-  margin: 4rem 3.5rem 2rem 2rem;
+  margin: 1.5rem 3.5rem 2rem 2rem;
 }
 
 .header {
@@ -17,10 +17,6 @@
 
 .back img {
   width: 5%;
-}
-
-.back p {
-  font-size: 1.5rem;
 }
 
 .header-main {
@@ -42,7 +38,6 @@
 .link p {
   margin: 0 auto;
   width: 60%;
-  cursor: pointer;
   text-align: center;
   background-color: #0a9c7d;
   color: #fff;
