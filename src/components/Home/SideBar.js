@@ -1,5 +1,5 @@
-import { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Fragment } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 import Dashboard from '../../assets/dashboard.svg';
 import DashboardColor from '../../assets/dashboardColor.svg';
@@ -31,49 +31,40 @@ const SIDE_BAR = [
 ];
 
 const SideBar = () => {
-  const [selected, setSelected] = useState(1);
-  const handleClick = id => {
-    setSelected(id);
+  const navLinkStyles = ({ isActive }) => {
+    return {
+      backgroundColor: isActive ? '#e7fffa' : '',
+      borderLeft: isActive ? '0.4rem solid #0a9c7d' : '',
+    };
   };
 
   return (
     <Fragment>
       <nav className={classes.sidebar}>
-        <ul className={classes.navigate}>
-          {selected &&
-            SIDE_BAR.map(list => (
-              <Link
-                to={`${list.label}`}
-                key={list.id}
-                className={classes[selected === list.id ? 'selected' : '']}
-              >
-                <div
-                  className={classes.link}
-                  onClick={() => handleClick(list.id)}
-                >
-                  <img
-                    src={selected === list.id ? list.iconColor : list.icon}
-                    alt=""
-                  />
-                  <p>
+        <div className={classes.navigate}>
+          {SIDE_BAR.map(list => (
+            <NavLink to={`${list.label}`} key={list.id} style={navLinkStyles}>
+              {({ isActive }) => (
+                <div className={classes.link}>
+                  <img src={isActive ? list.iconColor : list.icon} alt="" />
+                  <p className={classes[isActive ? 'active' : '']}>
                     {list.label}
-                    {list.label === 'Notifications' && selected === list.id && (
+                    {list.label === 'notifications' && isActive && (
                       <span>1</span>
                     )}
                   </p>
                 </div>
-              </Link>
-            ))}
-        </ul>
+              )}
+            </NavLink>
+          ))}
+        </div>
 
-        <ul className={classes['log-out']}>
-          <li>
-            <Link to="/" className={classes.link}>
-              <img src={logout} alt="" />
-              <p>Log out</p>
-            </Link>
-          </li>
-        </ul>
+        <div className={classes['log-out']}>
+          <Link to="/" className={classes.link}>
+            <img src={logout} alt="" />
+            <p>Log out</p>
+          </Link>
+        </div>
       </nav>
     </Fragment>
   );

@@ -1,7 +1,7 @@
 .display {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .timetable {
@@ -9,24 +9,24 @@
   justify-content: space-between;
   border: 0.1rem solid #838383;
   align-items: center;
-  padding: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
 }
 
 .type {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   width: 33.33%;
 }
 
 .date {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #706363;
   width: 33.33%;
 }
 
 .active {
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem;
   border: none;
   background-color: #0a9c7d;
   border-radius: 0.8rem;
@@ -36,7 +36,7 @@
 }
 
 .inactive {
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem;
   border: none;
   border-radius: 0.8rem;
   color: #fff;

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
+import Questions from './components/Questions/Questions';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="assessments" element={<Assessments />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="questions" element={<Questions />} />
         </Route>
       </Routes>
     </div>
