@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: center;
+  padding: 0.95rem 2rem;
+  background-color: #fbfbfb;
+  border-bottom: 0.1rem solid #e9e9e9;
+}
+
+.logo {
+  width: 12%;
+}
+
+.search {
+  display: flex;
+  width: 55%;
+}
+
+.search input {
+  background-color: #f4f4f4;
+  border: 0.1rem solid #e9e9e9;
+  padding: 1rem 1rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  position: relative;
+}
+
+.search img {
+  position: absolute;
+  top: 3.7%;
+  left: 76%;
+  width: 1.5%;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user p {
+  background-color: #d9d9d9;
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.user img {
+  width: 20%;
+  cursor: pointer;
+}
