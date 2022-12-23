@@ -30,7 +30,7 @@ const SIDE_BAR = [
   },
 ];
 
-const SideBar = props => {
+const SideBar = () => {
   const navLinkStyles = ({ isActive }) => {
     return {
       backgroundColor: isActive ? '#e7fffa' : '',

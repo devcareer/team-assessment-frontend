@@ -1,5 +1,5 @@
 .dashboard {
-  padding: 4.5rem 5rem 4rem 3rem;
+  padding: 4rem 5rem 4rem 3rem;
 }
 
 .header-main {
@@ -25,7 +25,7 @@
 .display {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 3rem;
+  padding-bottom: 2.2rem;
 }
 
 .summary {
