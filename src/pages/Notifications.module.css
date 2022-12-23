@@ -1,0 +1,43 @@
+.notifications {
+  padding: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 7rem;
+}
+
+.back {
+  display: flex;
+  gap: 1rem;
+  width: 35%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.back img {
+  width: 5%;
+}
+
+.header-main {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.body img {
+  margin: 0 auto;
+  width: 10%;
+  margin-bottom: 1.5rem;
+}
+
+.body p {
+  text-align: center;
+}
+
+.main-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: 7vh 93vh;
   grid-template-columns:
-    [sidebar-start] 15rem [sidebar-end full-start] 1fr [center-start] repeat(
+    [sidebar-start] 20rem [sidebar-end full-start] 1fr [center-start] repeat(
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
