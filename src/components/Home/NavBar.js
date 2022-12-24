@@ -3,8 +3,15 @@ import classes from './NavBar.module.css';
 import logo from '../../assets/logo.png';
 import search from '../../assets/Search.svg';
 import menu from '../../assets/menu.svg';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const NavBar = () => {
+  const [dropdown, setDropdown] = useState(false);
+  const handleClick = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <div className={classes.navbar}>
       <img className={classes.logo} src={logo} alt="logo" />
@@ -12,13 +19,20 @@ const NavBar = () => {
         <input type="search" placeholder="Search something" />
         <img src={search} alt="" />
       </div>
-      <div className={classes.user}>
+      <div className={classes.user} onClick={handleClick}>
         <p>NC</p>
         <img src={menu} alt="" />
-        <ul className={classes.dropdown}>
-          <li>My Profile</li>
-          <li>Settings</li>
-        </ul>
+
+        {dropdown && (
+          <ul className={classes.dropdown}>
+            <li>
+              <Link>My Profile</Link>
+            </li>
+            <li>
+              <Link>Settings</Link>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );
