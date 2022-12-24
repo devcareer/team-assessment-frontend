@@ -15,10 +15,9 @@ const NavBar = () => {
       <div className={classes.user}>
         <p>NC</p>
         <img src={menu} alt="" />
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul className={classes.dropdown}>
+          <li>My Profile</li>
+          <li>Settings</li>
         </ul>
       </div>
     </div>
