@@ -37,6 +37,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .user p {
@@ -49,21 +50,33 @@
 
 .user img {
   width: 20%;
-  cursor: pointer;
 }
 
 .dropdown {
   position: absolute;
   top: 9%;
   left: 90%;
-  opacity: 1;
   font-size: 1.2rem;
   background-color: #fff;
   padding: 2rem 2rem 1rem 1.5rem;
   box-shadow: 0.1rem 0.3rem 0.5rem rgb(0, 0, 0, 0.25);
   border-radius: 1rem;
+  animation: slideIn 300ms ease-in;
+  transition: all;
 }
 
 .dropdown li:first-child {
   padding-bottom: 1rem;
+}
+
+@keyframes slideIn {
+  from {
+    top: 5%;
+    opacity: 0;
+  }
+
+  to {
+    top: 9%;
+    opacity: 1;
+  }
 }
