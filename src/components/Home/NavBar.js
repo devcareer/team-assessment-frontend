@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import classes from './NavBar.module.css';
 
 import logo from '../../assets/logo.png';
 import search from '../../assets/Search.svg';
 import menu from '../../assets/menu.svg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 const NavBar = () => {
   const [dropdown, setDropdown] = useState(false);
