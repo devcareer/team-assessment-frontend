@@ -1,0 +1,44 @@
+.questions {
+  padding: 1.5rem 2.5rem;
+}
+
+.questions ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.questions li {
+  margin-bottom: 1.5rem;
+}
+
+.questions p {
+  padding-bottom: 1rem;
+}
+
+.questions label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.questions label:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #0a9c7d;
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  width: 12rem;
+}
+
+.inactive {
+  background-color: #b4eadf;
+}

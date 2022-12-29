@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
-import Questions from './components/Home/Questions';
+import Tests from './components/Questions/Tests';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="assessments" element={<Assessments />} />
           <Route path="notifications" element={<Notifications />} />
-          <Route path="questions" element={<Questions />} />
+          <Route path="questions" element={<Tests />} />
         </Route>
       </Routes>
     </div>
