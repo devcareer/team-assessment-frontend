@@ -1,12 +1,12 @@
-import React from "react";
-import SigninForm from "../components/Signin/SigninForm"
+import React from 'react';
+import SigninForm from '../components/Signin/SigninForm';
 
-function Signin(){
-    return(
-        <div>
-            <SigninForm/>
-        </div>
-    )
+function Signin(props) {
+  return (
+    <div>
+      <SigninForm onlogin={props.onLogin} onsetLogin={props.onsetLogin} />
+    </div>
+  );
 }
 
-export default Signin
+export default Signin;
