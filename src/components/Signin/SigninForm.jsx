@@ -13,6 +13,8 @@ function SigninForm() {
   const [checked, setChecked] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
+  const navigate = useNavigate();
+
   const emailChangeHandler = e => {
     setEnteredEmail(e.target.value);
 
@@ -39,7 +41,6 @@ function SigninForm() {
     );
   };
 
-  const navigate = useNavigate();
   const submitHandler = e => {
     e.preventDefault();
     if (formIsValid) navigate('/home/dashboard');

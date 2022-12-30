@@ -38,8 +38,21 @@ button {
   padding: 0.8rem 2.5rem;
   border-radius: 0.5rem;
   width: 12rem;
+  font-weight: 500;
 }
 
 .inactive {
   background-color: #b4eadf;
+}
+
+.active {
+  background-color: #fff;
+  border: 0.05rem solid #0a9c7d;
+  color: #0a9c7d;
+}
+
+.active:hover,
+.active:active {
+  background-color: #0a9c7d;
+  color: #fff;
 }
