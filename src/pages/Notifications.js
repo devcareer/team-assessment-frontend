@@ -4,7 +4,7 @@ import bell from '../assets/bell.png';
 
 import classes from './Notifications.module.css';
 
-const NOTIFICATIONS = [];
+// const NOTIFICATIONS = [];
 
 const Notifications = () => {
   return (

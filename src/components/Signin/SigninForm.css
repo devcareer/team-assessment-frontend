@@ -1,42 +1,43 @@
-.google-button{
-    color: #0A9C7D;
-    border: 1px solid #0A9C7D;
-    border-radius: 10px;
-    font-weight: 500;
-    width: 100%;
+.google-button {
+  border: 1px solid #0a9c7d;
+  color: white;
+  border-radius: 10px;
+  font-weight: 500;
+  width: 100%;
 }
 
-.google-button:hover{
-    background-color: whitesmoke;
+.google-button:hover {
+  background-color: whitesmoke;
+  color: #0a9c7d;
 }
 
-.or{
-    color: #706363;
+.or {
+  color: #706363;
 }
 
-.input{
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.policy{
-    color: #0A9C7D;
+.policy {
+  color: #0a9c7d;
 }
 
-.button{
-    width: 100%;
-    border: 1px solid #0A9C7D;
-    border-radius: 10px;
-    margin-top: 1.5em;
-    background-color: #0A9C7D;
-    color: white;
+.button {
+  width: 100%;
+  border: 1px solid #0a9c7d;
+  border-radius: 10px;
+  margin-top: 1.5em;
+  background-color: #0a9c7d;
+  color: white;
 }
 
-.button:hover{
-    background-color: #187a65;
+.button:hover {
+  background-color: #187a65;
 }
 
-.sign-text{
-    background-color:#08342B;
+.sign-text {
+  background-color: #08342b;
 }
