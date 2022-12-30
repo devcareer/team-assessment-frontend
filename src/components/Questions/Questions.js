@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 import classes from './Questions.module.css';
 
 const Questions = props => {
   const questions = props.questions;
+  const navigate = useNavigate();
 
   const prevPageHandler = () => {
     if (props.curPage !== 1) props.setCurPage(props.curPage - 1);
@@ -9,6 +12,7 @@ const Questions = props => {
 
   const nextPageHandler = () => {
     if (props.curPage !== props.numOfPages) props.setCurPage(props.curPage + 1);
+    if (props.curPage === props.numOfPages) navigate('/home/submit');
   };
 
   return (
@@ -66,18 +70,13 @@ const Questions = props => {
       </ol>
       <div className={classes['page-nav']}>
         <button
-          className={classes[props.curPage === 1 ? 'inactive' : '']}
+          className={classes[props.curPage === 1 ? 'inactive' : 'active']}
           onClick={prevPageHandler}
         >
           Previous
         </button>
-        <button
-          className={
-            classes[props.curPage === props.numOfPages ? 'inactive' : '']
-          }
-          onClick={nextPageHandler}
-        >
-          Next
+        <button onClick={nextPageHandler} className={classes.active}>
+          {props.curPage === props.numOfPages ? 'Submit' : 'Next'}
         </button>
       </div>
     </div>

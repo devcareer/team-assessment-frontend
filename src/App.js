@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
 import Tests from './components/Questions/Tests';
+import Submit from './components/Questions/Submit';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="assessments" element={<Assessments />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="questions" element={<Tests />} />
+          <Route path="submit" element={<Submit />} />
         </Route>
       </Routes>
     </div>
