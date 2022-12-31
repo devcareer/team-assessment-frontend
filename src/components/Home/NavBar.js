@@ -26,7 +26,7 @@ const NavBar = () => {
         {dropdown && (
           <ul className={classes.dropdown}>
             <li>
-              <Link>My Profile</Link>
+              <Link to="/profile">My Profile</Link>
             </li>
             <li>
               <Link>Settings</Link>
