@@ -8,18 +8,6 @@
   gap: 2rem;
 }
 
-.back {
-  display: flex;
-  gap: 1rem;
-  width: 35%;
-  align-items: center;
-  cursor: pointer;
-}
-
-.back img {
-  width: 5%;
-}
-
 .header-main {
   font-size: 2.5rem;
   font-weight: 500;

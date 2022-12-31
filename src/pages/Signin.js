@@ -1,10 +1,10 @@
 import React from 'react';
 import SigninForm from '../components/Signin/SigninForm';
 
-function Signin(props) {
+function Signin() {
   return (
     <div>
-      <SigninForm onlogin={props.onLogin} onsetLogin={props.onsetLogin} />
+      <SigninForm />
     </div>
   );
 }

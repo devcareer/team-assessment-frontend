@@ -1,23 +1,13 @@
-import { useNavigate } from 'react-router-dom';
-import back from '../assets/back.svg';
 import bell from '../assets/bell.png';
+import Back from '../components/Back';
 
 import classes from './Notifications.module.css';
 
 const Notifications = props => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(-1);
-  };
-
   return (
     <div className={classes.notifications}>
       <div className={classes.header}>
-        <div onClick={handleClick} className={classes.back}>
-          <img src={back} alt="" />
-          <p>Back</p>
-        </div>
+        <Back />
         <div className={classes['header-box']}>
           <p className={classes['header-main']}>Notifications</p>
           {props.notify.length > 0 && (
