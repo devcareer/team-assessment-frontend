@@ -5,14 +5,14 @@ import SideBar from '../components/Home/SideBar';
 
 import classes from './Home.module.css';
 
-function Home() {
+function Home(props) {
   return (
     <div className={classes.dashboard}>
       <nav className={classes.navbar}>
         <NavBar />
       </nav>
       <div className={classes.sidebar}>
-        <SideBar />
+        <SideBar notify={props.notify} />
       </div>
       <main className={classes.content}>
         <Outlet />

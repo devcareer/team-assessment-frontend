@@ -30,7 +30,7 @@ const SIDE_BAR = [
   },
 ];
 
-const SideBar = () => {
+const SideBar = props => {
   const navLinkStyles = ({ isActive }) => {
     return {
       backgroundColor: isActive ? '#e7fffa' : '',
@@ -49,9 +49,11 @@ const SideBar = () => {
                   <img src={isActive ? list.iconColor : list.icon} alt="" />
                   <p className={classes[isActive ? 'active' : '']}>
                     {list.label}
-                    {list.label === 'notifications' && isActive && (
-                      <span>1</span>
-                    )}
+                    {list.label === 'notifications' &&
+                      isActive &&
+                      props.notify.length > 0 && (
+                        <span>{props.notify.length}</span>
+                      )}
                   </p>
                 </div>
               )}

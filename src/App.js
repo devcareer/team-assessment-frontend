@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
+import nextId from 'react-id-generator';
+
 import Signin from './pages/Signin';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
@@ -7,16 +9,35 @@ import Notifications from './pages/Notifications';
 import Tests from './components/Questions/Tests';
 import Submit from './components/Questions/Submit';
 
+const NOTIFICATIONS = [
+  {
+    id: nextId(),
+    message: 'You have completed an assessment.',
+    link: 'View Score',
+    date: '08/12/22',
+    time: '11:59AM',
+  },
+  {
+    id: nextId(),
+    message: 'You have a pending assessment.',
+    link: 'Go to Assessment',
+    date: '08/12/22',
+    time: '11:00AM',
+  },
+];
+
 function App() {
   return (
     <div className="App">
       <Routes>
-        (
-        <Route exact path="/" element={<Signin />} />)
-        <Route path="home" element={<Home />}>
+        <Route exact path="/" element={<Signin />} />
+        <Route path="home" element={<Home notify={NOTIFICATIONS} />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="assessments" element={<Assessments />} />
-          <Route path="notifications" element={<Notifications />} />
+          <Route
+            path="notifications"
+            element={<Notifications notify={NOTIFICATIONS} />}
+          />
           <Route path="questions" element={<Tests />} />
           <Route path="submit" element={<Submit />} />
         </Route>
