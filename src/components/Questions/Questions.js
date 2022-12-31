@@ -26,37 +26,37 @@ const Questions = props => {
             <ul>
               {que.options.map(opt => (
                 <span key={opt.id}>
-                  <label htmlFor={opt.id}>
+                  <label htmlFor={opt.a + opt.id}>
                     <input
                       type="radio"
-                      id={opt.id}
+                      id={opt.a + opt.id}
                       name={opt.id}
                       value={opt.a}
                     />
                     <span> {opt.a}</span>
                   </label>
-                  <label htmlFor={opt.id}>
+                  <label htmlFor={opt.b + opt.id}>
                     <input
                       type="radio"
-                      id={opt.id}
+                      id={opt.b + opt.id}
                       name={opt.id}
                       value={opt.b}
                     />
                     <span>{opt.b}</span>
                   </label>
-                  <label htmlFor={opt.id}>
+                  <label htmlFor={opt.c + opt.id}>
                     <input
                       type="radio"
-                      id={opt.id}
+                      id={opt.c + opt.id}
                       name={opt.id}
                       value={opt.c}
                     />
                     <span>{opt.c}</span>
                   </label>
-                  <label htmlFor={opt.id}>
+                  <label htmlFor={opt.d + opt.id}>
                     <input
                       type="radio"
-                      id={opt.id}
+                      id={opt.d + opt.id}
                       name={opt.id}
                       value={opt.d}
                     />

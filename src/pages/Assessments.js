@@ -1,15 +1,21 @@
 import classes from './Assessments.module.css';
 import back from '../assets/back.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Assessments = () => {
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    navigate(-1);
+  };
+
   return (
     <div className={classes.assessments}>
       <div className={classes.header}>
-        <Link className={classes.back}>
+        <div onClick={clickHandler} className={classes.back}>
           <img src={back} alt="" />
           <p>Back</p>
-        </Link>
+        </div>
         <p className={classes['header-main']}>General Assessment</p>
       </div>
       <div className={classes.body}>
