@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import nextId from 'react-id-generator';
 
@@ -9,6 +11,8 @@ import Notifications from './pages/Notifications';
 import Submit from './components/Questions/Submit';
 import Profile from './components/Profile/Profile';
 import RenderAssessments from './components/Questions/RenderAssessments';
+import PageNotFound from './pages/PageNotFound';
+import LoadingSpinner from './components/UI/LoadingSpinner';
 
 const NOTIFICATIONS = [
   {
@@ -28,22 +32,37 @@ const NOTIFICATIONS = [
 ];
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <div className="App">
-      <Routes>
-        <Route exact path="/" element={<Signin />} />
-        <Route path="home" element={<Home notify={NOTIFICATIONS} />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="assessments" element={<Assessments />} />
-          <Route
-            path="notifications"
-            element={<Notifications notify={NOTIFICATIONS} />}
-          />
-          <Route path="questions" element={<RenderAssessments />} />
-          <Route path="submit" element={<Submit />} />
-        </Route>
-        <Route path="profile" element={<Profile />} />
-      </Routes>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <Routes>
+          <Route path="*" element={<PageNotFound />} />
+          <Route exact path="/" element={<Signin />} />
+          <Route path="home" element={<Home notify={NOTIFICATIONS} />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="assessments" element={<Assessments />} />
+            <Route
+              path="notifications"
+              element={<Notifications notify={NOTIFICATIONS} />}
+            />
+            <Route path="questions" element={<RenderAssessments />} />
+            <Route path="submit" element={<Submit />} />
+          </Route>
+          <Route path="profile" element={<Profile />} />
+        </Routes>
+      )}
     </div>
   );
 }

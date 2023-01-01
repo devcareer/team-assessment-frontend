@@ -1,0 +1,15 @@
+.body {
+  padding: 2.5rem;
+}
+
+.body h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.error {
+  width: 25%;
+  margin: 0 auto;
+}

@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.back img {
+  width: 4%;
+}
+
 .sidebar {
   grid-column: sidebar-start / center-start;
 }
