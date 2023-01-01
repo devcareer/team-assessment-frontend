@@ -9,6 +9,7 @@ import Notifications from './pages/Notifications';
 import Tests from './components/Questions/Tests';
 import Submit from './components/Questions/Submit';
 import Profile from './components/Profile/Profile';
+import RenderAssessments from './components/Questions/RenderAssessments';
 
 const NOTIFICATIONS = [
   {
@@ -39,7 +40,7 @@ function App() {
             path="notifications"
             element={<Notifications notify={NOTIFICATIONS} />}
           />
-          <Route path="questions" element={<Tests />} />
+          <Route path="questions" element={<RenderAssessments />} />
           <Route path="submit" element={<Submit />} />
         </Route>
         <Route path="profile" element={<Profile />} />

@@ -298,7 +298,6 @@ const Tests = () => {
   return (
     <div>
       <div className={classes.header}>
-        <Timer />
         <Pagination
           numOfPages={numOfTotalPages}
           questions={QUESTIONS}
