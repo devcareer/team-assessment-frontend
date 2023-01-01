@@ -8,11 +8,27 @@ import save from '../../assets/save.svg';
 import classes from './Profile.module.css';
 
 const Profile = () => {
-  const [selected, setSelected] = useState('');
+  const [gender, setGender] = useState('');
+  const [country, setCountry] = useState('');
+  const [state, setState] = useState('');
+  const [track, setTrack] = useState('');
 
-  const handleChange = e => {
-    setSelected(e.target.value);
+  const handleChangeGender = e => {
+    setGender(e.target.value);
   };
+
+  const handleChangeCountry = e => {
+    setCountry(e.target.value);
+  };
+
+  const handleChangeState = e => {
+    setState(e.target.value);
+  };
+
+  const handleChangeTrack = e => {
+    setTrack(e.target.value);
+  };
+
   return (
     <div>
       <NavBar />
@@ -54,7 +70,7 @@ const Profile = () => {
             </label>
             <label htmlFor="gender">
               Gender
-              <select value={selected} id="gender" onChange={handleChange}>
+              <select value={gender} id="gender" onChange={handleChangeGender}>
                 <option disabled={true} hidden value="">
                   Select an option
                 </option>
@@ -72,7 +88,11 @@ const Profile = () => {
             </label>
             <label htmlFor="country">
               Country
-              <select value={selected} id="country" onChange={handleChange}>
+              <select
+                value={country}
+                id="country"
+                onChange={handleChangeCountry}
+              >
                 <option disabled={true} hidden value="">
                   Select an option
                 </option>
@@ -83,7 +103,7 @@ const Profile = () => {
             </label>
             <label htmlFor="state">
               State
-              <select value={selected} id="state" onChange={handleChange}>
+              <select value={state} id="state" onChange={handleChangeState}>
                 <option disabled={true} hidden value="">
                   Select an option
                 </option>
@@ -95,7 +115,7 @@ const Profile = () => {
             </label>
             <label htmlFor="track">
               Track
-              <select value={selected} id="track" onChange={handleChange}>
+              <select value={track} id="track" onChange={handleChangeTrack}>
                 <option disabled={true} hidden value="">
                   Select an option
                 </option>
