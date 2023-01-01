@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
-import Tests from './components/Questions/Tests';
 import Submit from './components/Questions/Submit';
 import Profile from './components/Profile/Profile';
 import RenderAssessments from './components/Questions/RenderAssessments';
