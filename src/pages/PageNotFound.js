@@ -3,7 +3,6 @@ import NavBar from '../components/Home/NavBar';
 
 import classes from './PageNotFound.module.css';
 import error from '../assets/error.svg';
-import LoadingSpinner from '../components/UI/LoadingSpinner';
 
 const PageNotFound = () => {
   return (

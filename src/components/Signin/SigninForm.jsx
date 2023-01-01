@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import google from '../../assets/google-icon.png';
@@ -13,32 +13,24 @@ function SigninForm() {
   const [checked, setChecked] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
+  useEffect(() => {
+    setFormIsValid(
+      checked && enteredName.trim().length > 6 && enteredEmail.includes('@')
+    );
+  }, [checked, enteredName, enteredEmail]);
+
   const navigate = useNavigate();
 
   const emailChangeHandler = e => {
     setEnteredEmail(e.target.value);
-
-    setFormIsValid(
-      e.target.value.includes('@') && enteredName.trim().length > 6 && checked
-    );
   };
 
   const nameChangeHandler = e => {
     setEnteredName(e.target.value);
-
-    setFormIsValid(
-      e.target.value.trim().length > 6 && enteredEmail.includes('@') && checked
-    );
   };
 
   const checkHandler = e => {
     setChecked(e.target.checked);
-
-    setFormIsValid(
-      e.target.checked &&
-        enteredName.trim().length > 6 &&
-        enteredEmail.includes('@')
-    );
   };
 
   const submitHandler = e => {
