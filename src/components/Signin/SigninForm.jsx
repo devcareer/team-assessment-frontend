@@ -14,9 +14,15 @@ function SigninForm() {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
-    setFormIsValid(
-      checked && enteredName.trim().length > 6 && enteredEmail.includes('@')
-    );
+    const identifier = setTimeout(() => {
+      setFormIsValid(
+        checked && enteredName.trim().length > 6 && enteredEmail.includes('@')
+      );
+    }, 500);
+
+    return () => {
+      clearTimeout(identifier);
+    };
   }, [checked, enteredName, enteredEmail]);
 
   const navigate = useNavigate();

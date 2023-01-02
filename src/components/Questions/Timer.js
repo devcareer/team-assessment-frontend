@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import clock from '../../assets/timer.svg';
 
@@ -8,10 +8,8 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
-  let timer;
-
   useEffect(() => {
-    timer = setInterval(() => {
+    const timer = setInterval(() => {
       setSeconds(seconds + 1);
 
       if (seconds === 59) {
@@ -21,7 +19,7 @@ const Timer = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  });
+  }, [seconds, minutes]);
 
   return (
     <div className={classes.timer}>

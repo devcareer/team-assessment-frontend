@@ -1,5 +1,7 @@
-import { Fragment } from 'react';
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+
+import AuthContext from '../../store/auth-context';
 
 import Dashboard from '../../assets/dashboard.svg';
 import DashboardColor from '../../assets/dashboardColor.svg';
@@ -30,7 +32,9 @@ const SIDE_BAR = [
   },
 ];
 
-const SideBar = props => {
+const SideBar = () => {
+  const ctx = useContext(AuthContext);
+
   const navLinkStyles = ({ isActive }) => {
     return {
       backgroundColor: isActive ? '#e7fffa' : '',
@@ -39,36 +43,34 @@ const SideBar = props => {
   };
 
   return (
-    <Fragment>
-      <nav className={classes.sidebar}>
-        <div className={classes.navigate}>
-          {SIDE_BAR.map(list => (
-            <NavLink to={`${list.label}`} key={list.id} style={navLinkStyles}>
-              {({ isActive }) => (
-                <div className={classes.link}>
-                  <img src={isActive ? list.iconColor : list.icon} alt="" />
-                  <p className={classes[isActive ? 'active' : '']}>
-                    {list.label}
-                    {list.label === 'notifications' &&
-                      isActive &&
-                      props.notify.length > 0 && (
-                        <span>{props.notify.length}</span>
-                      )}
-                  </p>
-                </div>
-              )}
-            </NavLink>
-          ))}
-        </div>
+    <nav className={classes.sidebar}>
+      <div className={classes.navigate}>
+        {SIDE_BAR.map(list => (
+          <NavLink to={`${list.label}`} key={list.id} style={navLinkStyles}>
+            {({ isActive }) => (
+              <div className={classes.link}>
+                <img src={isActive ? list.iconColor : list.icon} alt="" />
+                <p className={classes[isActive ? 'active' : '']}>
+                  {list.label}
+                  {list.label === 'notifications' &&
+                    isActive &&
+                    ctx.NOTIFICATIONS.length > 0 && (
+                      <span>{ctx.NOTIFICATIONS.length}</span>
+                    )}
+                </p>
+              </div>
+            )}
+          </NavLink>
+        ))}
+      </div>
 
-        <div className={classes['log-out']}>
-          <Link to="/" className={classes.link}>
-            <img src={logout} alt="" />
-            <p>Log out</p>
-          </Link>
-        </div>
-      </nav>
-    </Fragment>
+      <div className={classes['log-out']}>
+        <Link to="/" className={classes.link}>
+          <img src={logout} alt="" />
+          <p>Log out</p>
+        </Link>
+      </div>
+    </nav>
   );
 };
 

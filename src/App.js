@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
-import nextId from 'react-id-generator';
 
 import Signin from './pages/Signin';
 import Home from './pages/Home';
@@ -13,26 +12,11 @@ import Profile from './components/Profile/Profile';
 import RenderAssessments from './components/Questions/RenderAssessments';
 import PageNotFound from './pages/PageNotFound';
 import LoadingSpinner from './components/UI/LoadingSpinner';
-
-const NOTIFICATIONS = [
-  {
-    id: nextId(),
-    message: 'You have completed an assessment.',
-    link: 'View Score',
-    date: '08/12/22',
-    time: '11:59AM',
-  },
-  {
-    id: nextId(),
-    message: 'You have a pending assessment.',
-    link: 'Go to Assessment',
-    date: '08/12/22',
-    time: '11:00AM',
-  },
-];
+import AuthContext from './store/auth-context';
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const ctx = useContext(AuthContext);
 
   useEffect(() => {
     setLoading(true);
@@ -50,12 +34,12 @@ function App() {
         <Routes>
           <Route path="*" element={<PageNotFound />} />
           <Route exact path="/" element={<Signin />} />
-          <Route path="home" element={<Home notify={NOTIFICATIONS} />}>
+          <Route path="home" element={<Home />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="assessments" element={<Assessments />} />
             <Route
               path="notifications"
-              element={<Notifications notify={NOTIFICATIONS} />}
+              element={<Notifications notify={ctx.NOTIFICATIONS} />}
             />
             <Route path="questions" element={<RenderAssessments />} />
             <Route path="submit" element={<Submit />} />
