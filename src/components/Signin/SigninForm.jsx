@@ -98,7 +98,7 @@ function SigninForm() {
                 <div className="">
                   I agree to the processing of my personal data (name and email)
                   for the purpose of conducting the assessment. Read{' '}
-                  <a href="#" className="policy hover:underline">
+                  <a href="/" className="policy hover:underline">
                     Privacy Policy
                   </a>{' '}
                   to know more.

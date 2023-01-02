@@ -1,5 +1,4 @@
 import classes from './Assessments.module.css';
-import back from '../assets/back.svg';
 import { Link } from 'react-router-dom';
 import Back from '../components/Back';
 

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import nextId from 'react-id-generator';
 
 import Pagination from './Pagination';
-import Timer from './Timer';
 import classes from './Tests.module.css';
 import Questions from './Questions';
 
