@@ -1,11 +1,15 @@
 import React from 'react';
 import SigninForm from '../components/Signin/SigninForm';
+import SignInText from '../components/Signin/SignInText';
+
+import classes from './SignIn.module.css';
 
 function Signin() {
   return (
-    <div>
+    <section className={classes.signin}>
       <SigninForm />
-    </div>
+      <SignInText />
+    </section>
   );
 }
 
