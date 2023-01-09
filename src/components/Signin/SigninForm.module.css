@@ -67,7 +67,7 @@ hr {
   font-size: inherit;
 }
 
-.form-container input::placeholder {
+.form-control input::placeholder {
   color: #a49e9e;
 }
 
@@ -97,6 +97,12 @@ hr {
 
 .form-container label:last-child input {
   width: fit-content;
+}
+
+.error-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b40e0e;
 }
 
 /* .google-button {
