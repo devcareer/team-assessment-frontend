@@ -27,8 +27,8 @@ const Timetable = () => {
     <div className={classes.display}>
       {TIMETABLE.map(list => (
         <div className={classes.timetable} key={list.id}>
-          <p className={classes.type}>{list.type}</p>
-          <p className={classes.date}>{list.date}</p>
+          <p>{list.type}</p>
+          <p>{list.date}</p>
           <button className={classes[list.style]}>Attempt</button>
         </div>
       ))}

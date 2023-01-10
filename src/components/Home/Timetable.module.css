@@ -9,24 +9,25 @@
   justify-content: space-between;
   border: 0.1rem solid #838383;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 1rem;
 }
 
-.type {
-  font-size: 1.5rem;
-  font-weight: 500;
+.timetable p {
+  font-size: 1.8rem;
   width: 33.33%;
 }
 
-.date {
-  font-size: 1.5rem;
+.timetable p:first-child {
+  font-weight: 500;
+}
+
+.timetable p:not(:first-child) {
   color: #706363;
-  width: 33.33%;
 }
 
 .active {
-  padding: 1rem 4rem;
+  padding: 1.5rem 0;
   border: none;
   background-color: #0a9c7d;
   border-radius: 0.8rem;
@@ -35,11 +36,23 @@
   cursor: pointer;
 }
 
+.active:hover {
+  background: linear-gradient(to right, #05b993, #3c2e9e);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.active:active {
+  background: none;
+  background-color: #50ceb3;
+}
+
 .inactive {
-  padding: 1rem 4rem;
+  padding: 1.5rem 0;
   border: none;
+  background-color: #b4eadf;
   border-radius: 0.8rem;
   color: #fff;
   font-family: inherit;
-  background-color: #b4eadf;
+  cursor: not-allowed;
 }
