@@ -1,0 +1,43 @@
+.text-container {
+  background-color: #08342b;
+  color: #fff;
+  padding: 15rem 0rem 0 7rem;
+}
+
+.size {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-container h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  padding-bottom: 1.5rem;
+  width: 90%;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+}
+
+.header,
+.compatibility,
+.network {
+  padding-bottom: 5rem;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.browsers {
+  display: flex;
+  gap: 2rem;
+}
+
+.network p {
+  max-width: 75%;
+  line-height: 1.6;
+}
