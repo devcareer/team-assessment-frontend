@@ -3,7 +3,7 @@
 }
 
 .dashboard h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
   padding-bottom: 1.7rem;
 }
@@ -14,8 +14,8 @@
   padding-bottom: 1.5rem;
 }
 
-.text {
-  font-size: 1.5rem;
+.intro p {
+  font-size: 2rem;
 }
 
 .intro span {
@@ -25,7 +25,7 @@
 .display {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2.2rem;
+  padding-bottom: 3rem;
 }
 
 .summary {
@@ -37,19 +37,19 @@
   padding-bottom: 1.5rem;
 }
 
-.num {
-  font-size: 2rem;
+.summary p:first-child {
+  font-size: 4rem;
   font-weight: 500;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
-.description {
+.summary p:last-child {
   color: #706363;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
-.header-sub {
-  font-size: 1.5rem;
+.dashboard h2 {
+  font-size: 2.5rem;
   font-weight: 500;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }

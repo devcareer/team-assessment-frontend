@@ -19,7 +19,6 @@
   width: 100%;
   border: 1px solid #0a9c7d;
   padding: 1rem 0;
-  background-color: #fff;
   color: #0a9c7d;
   cursor: pointer;
   transition: all 0.2s;
@@ -31,9 +30,35 @@
   padding-bottom: 0;
 }
 
-.form-container button:is(:hover, :active) {
+.form-container button:first-child {
+  background-color: #fff;
+}
+
+.form-container button:first-child:hover {
+  background: linear-gradient(to right, #05b993, #3c2e9e);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.form-container button:first-child:active {
+  background: none;
+  background-color: #50ceb3;
+}
+
+.form-container button:last-child {
   background-color: #0a9c7d;
   color: #fff;
+}
+
+.form-container button:last-child:hover {
+  background: linear-gradient(to right, #05b993, #3c2e9e);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.form-container button:last-child:active {
+  background: none;
+  background-color: #50ceb3;
 }
 
 .break {

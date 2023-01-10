@@ -13,20 +13,20 @@ const Dashboard = () => {
     <div className={classes.dashboard}>
       <h1>Dashboard</h1>
       <div className={classes.intro}>
-        <p className={classes.text}>
+        <p>
           Welcome back, <span>Nmasinachi</span>
         </p>
-        <p className={classes.text}>Track: UX/UI Design</p>
+        <p>Track: UX/UI Design</p>
       </div>
       <div className={classes.display}>
         {SUMMARY.map(list => (
           <div className={classes.summary} key={list.id}>
-            <p className={classes.num}>{list.num}</p>
-            <p className={classes.description}>{list.des}</p>
+            <p>{list.num}</p>
+            <p>{list.des}</p>
           </div>
         ))}
       </div>
-      <p className={classes['header-sub']}>Assessments</p>
+      <h2>Assessments</h2>
       <Timetable />
     </div>
   );
