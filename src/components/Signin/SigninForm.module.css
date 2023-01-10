@@ -1,5 +1,5 @@
 .form {
-  margin: 4rem 5rem;
+  margin: 4rem 5rem 3rem;
   width: 50%;
 }
 
@@ -90,7 +90,7 @@ hr {
 .form-container label:last-child {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 400;
   padding-bottom: 3rem;
 }
@@ -99,52 +99,14 @@ hr {
   width: fit-content;
 }
 
+.link {
+  color: #0a9c7d;
+  text-decoration: none;
+}
+
 .error-text {
+  display: inline;
   font-size: 1rem;
   font-weight: 400;
   color: #b40e0e;
 }
-
-/* .google-button {
-  border: 1px solid #0a9c7d;
-  color: white;
-  border-radius: 10px;
-  font-weight: 500;
-  width: 100%;
-}
-
-.google-button:hover {
-  background-color: whitesmoke;
-  color: #0a9c7d;
-}
-
-.or {
-  color: #706363;
-}
-
-.input {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.policy {
-  color: #0a9c7d;
-}
-
-.button {
-  width: 100%;
-  border: 1px solid #0a9c7d;
-  border-radius: 10px;
-  margin-top: 1.5em;
-  background-color: #0a9c7d;
-  color: white;
-}
-
-.button:hover {
-  background-color: #187a65;
-}
-
-.sign-text {
-  background-color: #08342b;
-} */
