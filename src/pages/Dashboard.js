@@ -3,15 +3,15 @@ import nextId from 'react-id-generator';
 import Timetable from '../components/Home/Timetable';
 
 const SUMMARY = [
-    { id: nextId(), num: 3, des: 'Assessments' },
-    { id: nextId(), num: 0, des: 'Points' },
-    { id: nextId(), num: 0, des: 'Completed' },
-  ]
+  { id: nextId(), num: 3, des: 'Assessments' },
+  { id: nextId(), num: 0, des: 'Points' },
+  { id: nextId(), num: 0, des: 'Completed' },
+];
 
 const Dashboard = () => {
   return (
     <div className={classes.dashboard}>
-      <p className={classes['header-main']}>Dashboard</p>
+      <h1>Dashboard</h1>
       <div className={classes.intro}>
         <p className={classes.text}>
           Welcome back, <span>Nmasinachi</span>
