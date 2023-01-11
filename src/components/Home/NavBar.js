@@ -21,7 +21,7 @@ const NavBar = () => {
       </div>
       <div className={classes.user} onClick={handleClick}>
         <p>NC</p>
-        <img src={menu} alt="" />
+        <img src={menu} className={classes[dropdown ? 'rotate' : '']} alt="" />
 
         {dropdown && (
           <ul className={classes.dropdown}>
