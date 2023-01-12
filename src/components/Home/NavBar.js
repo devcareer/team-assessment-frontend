@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import classes from './NavBar.module.css';
 
+import Modal from '../UI/Modal';
 import logo from '../../assets/logo.png';
 import search from '../../assets/Search.svg';
 import menu from '../../assets/menu.svg';
@@ -10,6 +11,10 @@ const NavBar = () => {
   const [dropdown, setDropdown] = useState(false);
   const handleClick = () => {
     setDropdown(!dropdown);
+  };
+
+  const handleClose = () => {
+    setDropdown(false);
   };
 
   return (
@@ -22,7 +27,7 @@ const NavBar = () => {
       <div className={classes.user} onClick={handleClick}>
         <p>NC</p>
         <img src={menu} className={classes[dropdown ? 'rotate' : '']} alt="" />
-
+        {dropdown && <Modal onClose={handleClose} />}
         {dropdown && (
           <ul className={classes.dropdown}>
             <li>

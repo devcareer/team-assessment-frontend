@@ -32,7 +32,7 @@
 
 .search img {
   position: absolute;
-  right: 19rem;
+  right: 20rem;
   transform: translate(0, 50%);
   top: 0;
 }
@@ -55,11 +55,11 @@
 
 .user img {
   width: 20%;
-  transition: all;
 }
 
 .rotate {
   transform: rotate(180deg);
+  transition: all 0.3s;
 }
 
 .dropdown {
@@ -75,6 +75,7 @@
   border-radius: 1rem;
   animation: slideIn 300ms ease-in;
   transition: animation 0.3s;
+  z-index: 25;
 }
 
 li {
@@ -97,7 +98,7 @@ li a {
   }
 
   to {
-    top: 9%;
+    top: 15%;
     opacity: 1;
   }
 }
