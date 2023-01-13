@@ -4,12 +4,17 @@
 
 .body h1 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
   padding-bottom: 2rem;
 }
 
-.error {
-  width: 25%;
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main img {
+  width: 50rem;
   margin: 0 auto;
 }

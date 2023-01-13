@@ -1,12 +1,13 @@
+import { Fragment } from 'react';
 import Tests from './Tests';
 import Timer from './Timer';
 
 const RenderAssessments = () => {
   return (
-    <div>
+    <Fragment>
       <Timer />
       <Tests />
-    </div>
+    </Fragment>
   );
 };
 

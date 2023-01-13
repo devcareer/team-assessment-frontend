@@ -7,13 +7,13 @@ const Pagination = props => {
     <div className={classes.pagination}>
       <p>
         {pages.map(page => (
-          <span
+          <button
             className={classes[props.curPage === page ? 'active' : '']}
             key={page}
             onClick={() => props.setCurPage(page)}
           >
             {page}
-          </span>
+          </button>
         ))}
       </p>
     </div>

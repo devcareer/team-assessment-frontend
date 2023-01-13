@@ -66,7 +66,7 @@ function SigninForm() {
     <div className={classes.form}>
       <img src={logo} alt="logo" />
       <div className={classes['form-container']}>
-        <button>
+        <button className={classes['google-signin']}>
           <img src={google} alt="google" />
           Sign in with Google
         </button>
@@ -127,7 +127,13 @@ function SigninForm() {
               </p>
             </label>
           </div>
-          <button type="submit">Sign In</button>
+          <button
+            type="submit"
+            disabled={!formIsValid}
+            className={classes[formIsValid ? 'active' : '']}
+          >
+            Sign In
+          </button>
         </form>
       </div>
     </div>

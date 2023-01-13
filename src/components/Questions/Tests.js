@@ -5,6 +5,7 @@ import nextId from 'react-id-generator';
 import Pagination from './Pagination';
 import classes from './Tests.module.css';
 import Questions from './Questions';
+import { Fragment } from 'react';
 
 const QUESTIONS = [
   {
@@ -295,7 +296,7 @@ const Tests = () => {
   );
 
   return (
-    <div>
+    <Fragment>
       <div className={classes.header}>
         <Pagination
           numOfPages={numOfTotalPages}
@@ -311,7 +312,7 @@ const Tests = () => {
         curPage={currentPage}
         setCurPage={setCurrentPage}
       />
-    </div>
+    </Fragment>
   );
 };
 

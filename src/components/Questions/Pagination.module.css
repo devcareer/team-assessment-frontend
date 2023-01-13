@@ -10,13 +10,15 @@
   color: #fff;
 }
 
-.pagination span {
-  padding: 0.2rem;
-  width: 1.8rem;
-  border-radius: 0.2rem;
+.pagination button {
+  padding: 0.5rem 0.8rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
   text-align: center;
   background-color: #b4eadf;
   cursor: pointer;
+  border: none;
+  color: #fff;
 }
 
 .pagination .active {
