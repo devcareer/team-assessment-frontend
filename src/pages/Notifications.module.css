@@ -2,33 +2,38 @@
   padding: 3rem;
 }
 
+.notifications h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.header-main {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
 .header-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.header-sub {
+.header-box p {
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 .body img {
   margin: 0 auto;
-  width: 10%;
+  width: 12rem;
   margin-bottom: 1.5rem;
   padding-top: 5.5rem;
+}
+
+.body .display {
+  display: flex;
 }
 
 .body p {
@@ -37,8 +42,12 @@
 
 .main-text {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
+}
+
+.text p:last-child {
+  font-size: 1.2rem;
 }
 
 .message {
@@ -46,9 +55,13 @@
   justify-content: space-between;
   align-items: center;
   border: 0.05rem solid #838383;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+}
+
+.message p:first-child {
+  font-size: 1.5rem;
 }
 
 .message span {
@@ -59,4 +72,8 @@
 
 .message-time {
   color: #a49e9e;
+}
+
+.message .message-time p {
+  font-size: 1.2rem;
 }

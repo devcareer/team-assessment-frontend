@@ -19,7 +19,7 @@
 }
 
 .back img {
-  width: 4%;
+  width: 1.6rem;
 }
 
 .sidebar {
@@ -28,7 +28,7 @@
 
 .forms {
   grid-column: center-start / full-end;
-  padding-left: 5.5rem;
+  padding-left: 7rem;
 }
 
 .forms-header {
@@ -39,12 +39,12 @@
 }
 
 .forms-header p {
-  font-size: 1.5rem;
-  padding-top: 0.8rem;
+  font-size: 2.5rem;
+  /* padding-top: 0.8rem; */
 }
 
-.header {
-  font-size: 2.5rem;
+.sidebar h1 {
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 5rem;
 }
@@ -56,7 +56,7 @@
   background-color: #d9d9d9;
   border-radius: 50%;
   width: fit-content;
-  padding: 2.5rem 3rem;
+  padding: 5.5rem 5rem;
   margin-bottom: 1rem;
 }
 
@@ -71,10 +71,21 @@
   color: #0a9c7d;
 }
 
-.button button:hover,
+/* .button button:hover,
 .button button:active {
   background-color: #0a9c7d;
   color: #fff;
+} */
+
+.button button:first-child:hover {
+  background: linear-gradient(to right, #05b993, #3c2e9e);
+  color: #fff;
+}
+
+.button button:first-child:active {
+  background: none;
+  background-color: #50ceb3;
+  border-color: transparent;
 }
 
 .save {
@@ -85,17 +96,18 @@
 }
 
 .save img {
-  width: 25%;
+  width: 1.5rem;
   padding-top: 0.7rem;
 }
 
 .save p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
 }
 
 .forms-body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-gap: 2.5rem;
 }
 
@@ -105,12 +117,12 @@
   border-radius: 1rem;
   display: block;
   width: 100%;
-  padding: 1.5rem 2rem 0.7rem 1rem;
+  padding: 2rem 2.5rem 1.2rem 1.5rem;
   margin-top: 0.5rem;
 }
 
 .forms-body label {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -121,11 +133,11 @@
 .forms-body ::placeholder,
 .forms-body select {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .forms-body select {
-  padding: 1.2rem 0rem 1.2rem 1rem;
+  padding: 1.7rem 0rem 1.7rem 1.5rem;
   color: #a49e9e;
   outline: none;
 }

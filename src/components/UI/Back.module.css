@@ -10,10 +10,12 @@
 .back button {
   display: flex;
   background-color: transparent;
+  padding: 1rem 1rem 1rem 0;
   border: none;
   border-color: transparent;
   color: inherit;
   align-items: center;
+  justify-content: flex-start;
   gap: 1rem;
   cursor: pointer;
   width: fit-content;

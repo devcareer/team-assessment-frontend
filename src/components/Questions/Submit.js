@@ -25,7 +25,9 @@ const Submit = () => {
         <button onClick={clickHandler}>Return to Dashboard</button>
       </div>
       <div className={classes.body}>
-        <img src={doodle} alt="doodle" className={classes.doodle} />
+        <div className={classes.display}>
+          <img src={doodle} alt="doodle" className={classes.doodle} />
+        </div>
         <p>Congratulations! You&rsquo;ve completed the assessment</p>
         <p className={classes.score}>Your Score: 45/50</p>
         <p className={classes.rating}>How was your test experience?</p>
@@ -49,7 +51,7 @@ const Submit = () => {
           </label>
         </form>
       </div>
-      <p>
+      <p className={classes.feedback}>
         Feedback <span>(Optional)</span>
       </p>
       <textarea
