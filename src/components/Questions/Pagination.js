@@ -2,7 +2,6 @@ import classes from './Pagination.module.css';
 
 const Pagination = props => {
   const pages = [...Array(props.numOfPages + 1).keys()].slice(1);
-  console.log(props.curPage);
 
   return (
     <div className={classes.pagination}>
