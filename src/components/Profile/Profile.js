@@ -37,7 +37,7 @@ const Profile = () => {
           <Back />
         </div>
         <div className={classes.sidebar}>
-          <p className={classes.header}>Profile</p>
+          <h1>Profile</h1>
           <p className={classes['profile-picture']}>NC</p>
           <div className={classes.button}>
             <button>Change Profile Picture</button>
