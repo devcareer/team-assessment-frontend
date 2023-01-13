@@ -1,16 +1,22 @@
 import classes from './Assessments.module.css';
-import { Link } from 'react-router-dom';
 import Back from '../components/Back';
+import { useNavigate } from 'react-router-dom';
 
 const Assessments = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/home/questions');
+  };
+
   return (
     <div className={classes.assessments}>
       <div className={classes.header}>
         <Back />
-        <p className={classes['header-main']}>General Assessment</p>
+        <h1>General Assessment</h1>
       </div>
       <div className={classes.body}>
-        <p className={classes['header-sub']}>INSTRUCTIONS</p>
+        <h2>INSTRUCTIONS</h2>
         <div className={classes.text}>
           <p>
             Lorem ipsum dolor sit amet consectetur. Tortor pellentesque lorem
@@ -51,9 +57,11 @@ const Assessments = () => {
           </p>
         </div>
       </div>
-      <Link to="/home/questions" className={classes.link}>
-        <p>Start Assessment</p>
-      </Link>
+      <div className={classes.display}>
+        <button onClick={handleClick}>
+          <p>Start Assessment</p>
+        </button>
+      </div>
     </div>
   );
 };

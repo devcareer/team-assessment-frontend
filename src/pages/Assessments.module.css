@@ -1,5 +1,5 @@
 .assessments {
-  padding: 1.5rem 7rem 2rem 2rem;
+  padding: 3.5rem 7rem 2rem 2rem;
 }
 
 .header {
@@ -7,8 +7,8 @@
   margin-bottom: 3rem;
 }
 
-.header-main {
-  font-size: 2.5rem;
+.header h1 {
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -16,23 +16,42 @@
   margin-bottom: 4rem;
 }
 
-.header-sub {
+.body h2 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .text {
+  font-size: 1.27rem;
   text-align: justify;
+  line-height: 1.6;
 }
 
-.link p {
+.display {
+  display: flex;
+}
+
+.display button {
   margin: 0 auto;
   width: 60%;
   text-align: center;
   background-color: #0a9c7d;
   color: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.display button:last-child:hover {
+  background: linear-gradient(to right, #05b993, #3c2e9e);
+  color: #fff;
+}
+
+.display button:last-child:active {
+  background: none;
+  background-color: #50ceb3;
+  border-color: transparent;
 }
