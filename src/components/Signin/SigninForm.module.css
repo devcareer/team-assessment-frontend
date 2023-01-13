@@ -1,7 +1,6 @@
 .form {
   margin: 4rem 5rem 3rem;
   width: 50%;
-  /* font-family: inherit; */
 }
 
 .form img {
@@ -21,7 +20,6 @@
   padding: 1rem 0;
   color: #0a9c7d;
   cursor: pointer;
-  transition: all 0.2s;
   font-size: 1.4rem;
 }
 
@@ -37,12 +35,12 @@
 .form-container button:first-child:hover {
   background: linear-gradient(to right, #05b993, #3c2e9e);
   color: #fff;
-  transition: all 0.2s;
 }
 
 .form-container button:first-child:active {
   background: none;
   background-color: #50ceb3;
+  border-color: transparent;
 }
 
 .form-container button:last-child {
@@ -53,12 +51,12 @@
 .form-container button:last-child:hover {
   background: linear-gradient(to right, #05b993, #3c2e9e);
   color: #fff;
-  transition: all 0.2s;
 }
 
 .form-container button:last-child:active {
   background: none;
   background-color: #50ceb3;
+  border-color: transparent;
 }
 
 .break {

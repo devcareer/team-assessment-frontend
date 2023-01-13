@@ -12,9 +12,11 @@ const Back = () => {
   };
 
   return (
-    <div onClick={clickHandler} className={classes.back}>
-      <img src={back} alt="" />
-      <p>Back</p>
+    <div className={classes.back}>
+      <button onClick={clickHandler}>
+        <img src={back} alt="" />
+        <p>Back</p>
+      </button>
     </div>
   );
 };

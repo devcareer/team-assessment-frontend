@@ -4,8 +4,21 @@
   width: 35%;
   align-items: center;
   cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.back button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  color: inherit;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .back img {
-  width: 5%;
+  width: 1.6rem;
 }

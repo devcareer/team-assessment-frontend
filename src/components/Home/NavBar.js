@@ -25,19 +25,25 @@ const NavBar = () => {
         <img src={search} alt="" />
       </div>
       <div className={classes.user} onClick={handleClick}>
-        <p>NC</p>
-        <img src={menu} className={classes[dropdown ? 'rotate' : '']} alt="" />
-        {dropdown && <Modal onClose={handleClose} />}
-        {dropdown && (
-          <ul className={classes.dropdown}>
-            <li>
-              <Link to="/profile">My Profile</Link>
-            </li>
-            <li>
-              <Link>Settings</Link>
-            </li>
-          </ul>
-        )}
+        <button>
+          <p>NC</p>
+          <img
+            src={menu}
+            className={classes[dropdown ? 'rotate' : '']}
+            alt=""
+          />
+          {dropdown && <Modal onClose={handleClose} />}
+          {dropdown && (
+            <ul className={classes.dropdown}>
+              <li>
+                <Link to="/profile">My Profile</Link>
+              </li>
+              <li>
+                <Link>Settings</Link>
+              </li>
+            </ul>
+          )}
+        </button>
       </div>
     </div>
   );

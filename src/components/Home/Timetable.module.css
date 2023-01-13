@@ -39,7 +39,6 @@
 .active:hover {
   background: linear-gradient(to right, #05b993, #3c2e9e);
   color: #fff;
-  transition: all 0.2s;
 }
 
 .active:active {

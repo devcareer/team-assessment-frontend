@@ -1,5 +1,6 @@
 import classes from './Timetable.module.css';
 import nextId from 'react-id-generator';
+import { useNavigate } from 'react-router-dom';
 
 const TIMETABLE = [
   {
@@ -23,13 +24,28 @@ const TIMETABLE = [
 ];
 
 const Timetable = () => {
+  const navigate = useNavigate();
+
+  const handleClickToAssessments = () => {
+    navigate('/home/assessments');
+  };
+
   return (
     <div className={classes.display}>
       {TIMETABLE.map(list => (
         <div className={classes.timetable} key={list.id}>
           <p>{list.type}</p>
           <p>{list.date}</p>
-          <button className={classes[list.style]}>Attempt</button>
+          <button
+            onClick={
+              list.type === 'General' && list.style === 'active'
+                ? handleClickToAssessments
+                : ''
+            }
+            className={classes[list.style]}
+          >
+            Attempt
+          </button>
         </div>
       ))}
     </div>
