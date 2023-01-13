@@ -16,11 +16,16 @@
   gap: 1rem;
   margin-bottom: 6rem;
   width: 100%;
-  border: 1px solid #0a9c7d;
-  padding: 1rem 0;
-  color: #0a9c7d;
-  cursor: pointer;
+  padding: 1.1rem 0;
+  cursor: not-allowed;
   font-size: 1.4rem;
+}
+
+.form-container .google-signin {
+  cursor: pointer;
+  color: #0a9c7d;
+  background-color: #fff;
+  border: 1px solid #0a9c7d;
 }
 
 .form-container img {
@@ -43,17 +48,19 @@
   border-color: transparent;
 }
 
-.form-container button:last-child {
+.form-container .active {
   background-color: #0a9c7d;
   color: #fff;
+  cursor: pointer;
+  cursor: pointer;
 }
 
-.form-container button:last-child:hover {
+.active:hover {
   background: linear-gradient(to right, #05b993, #3c2e9e);
   color: #fff;
 }
 
-.form-container button:last-child:active {
+.active:active {
   background: none;
   background-color: #50ceb3;
   border-color: transparent;

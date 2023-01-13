@@ -70,12 +70,13 @@ const Questions = props => {
       </ol>
       <div className={classes['page-nav']}>
         <button
-          className={classes[props.curPage === 1 ? 'inactive' : 'active']}
+          className={classes[props.curPage !== 1 ? 'active' : '']}
+          disabled={props.curPage === 1}
           onClick={prevPageHandler}
         >
           Previous
         </button>
-        <button onClick={nextPageHandler} className={classes.active}>
+        <button onClick={nextPageHandler}>
           {props.curPage === props.numOfPages ? 'Submit' : 'Next'}
         </button>
       </div>

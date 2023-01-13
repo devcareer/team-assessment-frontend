@@ -55,3 +55,7 @@
   font-family: inherit;
   cursor: not-allowed;
 }
+.display button:disabled,
+.display button[disabled] {
+  padding: 1.5rem 0;
+}
