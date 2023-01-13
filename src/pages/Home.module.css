@@ -12,12 +12,13 @@
 
 .navbar {
   grid-column: sidebar-start / full-end;
+  z-index: 5;
 }
 
 .sidebar {
   background-color: #fbfbfb;
   grid-column: sidebar-start / sidebar-end;
-  z-index: -10;
+  z-index: 1;
 }
 
 .content {
