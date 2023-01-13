@@ -26,8 +26,8 @@ const TIMETABLE = [
 const Timetable = () => {
   const navigate = useNavigate();
 
-  const handleClickToAssessments = () => {
-    navigate('/home/assessments');
+  const handleClickToAssessments = type => {
+    if (type === 'General') navigate('/home/assessments');
   };
 
   return (
@@ -37,11 +37,7 @@ const Timetable = () => {
           <p>{list.type}</p>
           <p>{list.date}</p>
           <button
-            onClick={
-              list.type === 'General' && list.style === 'active'
-                ? handleClickToAssessments
-                : ''
-            }
+            onClick={() => handleClickToAssessments(list.type)}
             className={classes[list.style]}
           >
             Attempt

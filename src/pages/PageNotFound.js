@@ -1,4 +1,4 @@
-import Back from '../components/Back';
+import Back from '../components/UI/Back';
 import NavBar from '../components/Home/NavBar';
 
 import classes from './PageNotFound.module.css';
