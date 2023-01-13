@@ -1,6 +1,6 @@
 import classes from './Dashboard.module.css';
 import nextId from 'react-id-generator';
-import Timetable from '../components/Home/Timetable';
+import Timetable from './Timetable';
 
 const SUMMARY = [
   { id: nextId(), num: 3, des: 'Assessments' },

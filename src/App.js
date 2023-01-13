@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Signin from './pages/Signin';
 import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Assessments from './pages/Assessments';
 import Notifications from './pages/Notifications';
 import Submit from './components/Questions/Submit';
