@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Back from '../Back';
+import Back from '../UI/Back';
 import NavBar from '../Home/NavBar';
 
 import save from '../../assets/save.svg';

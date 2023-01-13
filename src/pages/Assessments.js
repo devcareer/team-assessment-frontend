@@ -1,5 +1,5 @@
 import classes from './Assessments.module.css';
-import Back from '../components/Back';
+import Back from '../components/UI/Back';
 import { useNavigate } from 'react-router-dom';
 
 const Assessments = () => {

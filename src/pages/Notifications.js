@@ -1,5 +1,5 @@
 import bell from '../assets/bell.png';
-import Back from '../components/Back';
+import Back from '../components/UI/Back';
 
 import classes from './Notifications.module.css';
 
