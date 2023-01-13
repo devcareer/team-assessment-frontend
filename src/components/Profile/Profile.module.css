@@ -71,12 +71,6 @@
   color: #0a9c7d;
 }
 
-/* .button button:hover,
-.button button:active {
-  background-color: #0a9c7d;
-  color: #fff;
-} */
-
 .button button:first-child:hover {
   background: linear-gradient(to right, #05b993, #3c2e9e);
   color: #fff;
