@@ -12,7 +12,7 @@ import Profile from './components/Profile/Profile';
 import RenderAssessments from './components/Questions/RenderAssessments';
 import PageNotFound from './pages/PageNotFound';
 import LoadingSpinner from './components/UI/LoadingSpinner';
-import AuthContext from './store/auth-context';
+import AuthContext from './store/notify-context';
 
 function App() {
   const [loading, setLoading] = useState(false);
