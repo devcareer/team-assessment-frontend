@@ -3,7 +3,6 @@ import { useReducer } from 'react';
 const initialInputState = {
   value: '',
   isTouched: false,
-  isChecked: false,
 };
 
 const inputStateReducer = (state, action) => {
@@ -14,13 +13,7 @@ const inputStateReducer = (state, action) => {
       isChecked: state.isChecked,
     };
   }
-  if (action.type === 'CHECKED') {
-    return {
-      isChecked: action.value,
-      value: state.value,
-      isTouched: state.value,
-    };
-  }
+
   if (action.type === 'BLUR') {
     return {
       isTouched: true,
@@ -32,7 +25,6 @@ const inputStateReducer = (state, action) => {
     return {
       isTouched: false,
       value: '',
-      isChecked: false,
     };
   }
 
@@ -52,10 +44,6 @@ const useInput = validateValue => {
     dispatch({ type: 'INPUT', value: e.target.value });
   };
 
-  const checkChangeHandler = e => {
-    dispatch({ type: 'CHECKED', value: e.target.checked });
-  };
-
   const inputBlurHandler = () => {
     dispatch({ type: 'BLUR' });
   };
@@ -70,7 +58,6 @@ const useInput = validateValue => {
     hasError,
     valueChangeHandler,
     inputBlurHandler,
-    checkChangeHandler,
     reset,
   };
 };

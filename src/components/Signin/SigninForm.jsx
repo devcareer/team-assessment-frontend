@@ -12,6 +12,8 @@ const validPassword = value => value.trim().length > 6;
 
 function SigninForm() {
   const [view, setView] = useState(false);
+  const [checked, setChecked] = useState(false);
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -30,13 +32,11 @@ function SigninForm() {
     reset: resetPasswordInput,
   } = useInput(validPassword);
 
-  const {
-    value: checked,
-    isValid: checkedIsValid,
-    valueChangeHandler: checkedChangeHandler,
-    inputBlurHandler: checkedBlurHandler,
-    reset: resetCheckedInput,
-  } = useInput(value => value === 'on');
+  const checkedChangeHandler = e => {
+    setChecked(e.target.checked);
+  };
+
+  const checkedIsValid = checked;
 
   let formIsValid = false;
 
@@ -59,7 +59,6 @@ function SigninForm() {
 
     resetNameInput();
     resetPasswordInput();
-    resetCheckedInput();
   };
 
   return (
@@ -110,13 +109,7 @@ function SigninForm() {
           </label>
           <div className="">
             <label htmlFor="">
-              <input
-                type="checkbox"
-                checked={checked}
-                onChange={checkedChangeHandler}
-                onBlur={checkedBlurHandler}
-                required
-              />
+              <input type="checkbox" onChange={checkedChangeHandler} required />
               <p>
                 I agree to the processing of my personal data (name and email)
                 for the purpose of conducting the assessment. Read{' '}
