@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { AuthContextProvider } from './store/auth-context';
+import { NotifyContextProvider } from './store/notify-context';
 import { ErrorBoundary } from 'react-error-boundary';
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
@@ -21,9 +21,9 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <AuthContextProvider>
+        <NotifyContextProvider>
           <App />
-        </AuthContextProvider>
+        </NotifyContextProvider>
       </ErrorBoundary>
     </React.StrictMode>
   </BrowserRouter>

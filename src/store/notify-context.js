@@ -1,11 +1,11 @@
 import React from 'react';
 import nextId from 'react-id-generator';
 
-const AuthContext = React.createContext({
+const NotifyContext = React.createContext({
   NOTIFICATIONS: [],
 });
 
-export const AuthContextProvider = props => {
+export const NotifyContextProvider = props => {
   const NOTIFICATIONS = [
     {
       id: nextId(),
@@ -24,10 +24,10 @@ export const AuthContextProvider = props => {
   ];
 
   return (
-    <AuthContext.Provider value={{ NOTIFICATIONS }}>
+    <NotifyContext.Provider value={{ NOTIFICATIONS }}>
       {props.children}
-    </AuthContext.Provider>
+    </NotifyContext.Provider>
   );
 };
 
-export default AuthContext;
+export default NotifyContext;

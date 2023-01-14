@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../store/notify-context';
 
 import Dashboard from '../../assets/dashboard.svg';
 import DashboardColor from '../../assets/dashboardColor.svg';
