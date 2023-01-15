@@ -62,6 +62,10 @@ button[disabled] {
   color: #fff;
   cursor: not-allowed;
   border-color: transparent;
+}
+
+.questions button:disabled,
+.questions button[disabled] {
   padding: 1rem 0;
 }
 
@@ -83,7 +87,6 @@ button[disabled] {
   background-color: #0a9c7d;
   color: #fff;
   border: none;
-  /* padding: 2px 0; */
 }
 
 .page-nav button:last-child:hover {
