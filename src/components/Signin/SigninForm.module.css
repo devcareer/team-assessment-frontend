@@ -1,5 +1,5 @@
 .form {
-  margin: 4rem 5rem 3rem;
+  padding: 4rem 5rem 3.6rem;
   width: 50%;
 }
 
@@ -16,7 +16,6 @@
   gap: 1rem;
   margin-bottom: 6rem;
   width: 100%;
-  padding: 1.1rem 0;
   cursor: not-allowed;
   font-size: 1.4rem;
 }

@@ -38,7 +38,9 @@ const SideBar = () => {
   const navLinkStyles = ({ isActive }) => {
     return {
       backgroundColor: isActive ? '#e7fffa' : '',
-      borderLeft: isActive ? '0.4rem solid #0a9c7d' : '',
+      borderLeft: isActive
+        ? '0.4rem solid #0a9c7d'
+        : '0.4rem solid transparent',
     };
   };
 
